@@ -52,18 +52,75 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 
 #main {}
 #main-section {position: relative; top: 80px; width: 100%; height: 92vh;}
-#main-section h2 {position: relative; display: block; top: 40%; text-align: center;}
-#main-section h2 + h2 {}
-#main-section h2 + h2.em {}
+#main-section div.typing-txt {display: none;}
+#main-section div.typing-txt ul li {font-size: 26px; font-weight: 600;}
+#main-section div.typing-txt ul{list-style:none;}
+#main-section p.typing {position: relative; left: 50%; top: 40%; transform: translate(-50%, 0); font-size: 36px; font-weight: 600; text-align: center; display: inline-block; animation-name: cursor; animation-duration: 0.3s; animation-iteration-count: infinite;} 
+
+@keyframes cursor{ 
+  0%{border-right: 1px solid #fff} 
+  50%{border-right: 1px solid #000} 
+  100%{border-right: 1px solid #fff} 
+}
+
+
 
 #main-section ul li span {position: absolute; text-indent: -9999px;}
-#main-section ul li span.right01 {top: 0; left: 415px; width: 1px; height: 860px; border-right: 2px solid #000000;}
-#main-section ul li span.right02 {top: 0; left: 471px; width: 1px; height: 434px; border-right: 2px solid #000000;}
-#main-section ul li span.left01 {bottom: 0; left: 1446px; width: 1px; height: 700px; border-left: 2px solid #000000;}
-#main-section ul li span.left02 {bottom: 0; left: 1505px; width: 1px; height: 700px; border-left: 2px solid #000000;}
-#main-section ul li span.top01 {top: 220px; left: 0; width: 1560px; height: 1px; border-bottom: 2px solid #000000;}
-#main-section ul li span.top02 {top: 270px; right: 0; width: 1560px; height: 1px; border-bottom: 2px solid #000000;}
-#main-section ul li span.bottom01 {top: 650px; right: 0; width: 1560px; height: 1px; border-bottom: 2px solid #000000;}
+#main-section ul li span.right01.move01 {top: 0; left: 415px; width: 1px; height: 860px; border-right: 2px solid #000000; animation-name: move01; animation-duration: 4s;}
+#main-section ul li span.right02.move02 {top: 0; left: 471px; width: 1px; height: 434px; border-right: 2px solid #000000; animation-name: move02; animation-duration: 5s;}
+#main-section ul li span.left01.move03 {bottom: 0; left: 1446px; width: 1px; height: 700px; border-left: 2px solid #000000; animation-name: move03; animation-duration: 6s;}
+#main-section ul li span.left02.move04 {bottom: 0; left: 1505px; width: 1px; height: 700px; border-left: 2px solid #000000; animation-name: move04; animation-duration: 4s;}
+#main-section ul li span.top01.move05 {top: 220px; left: 0; width: 1560px; height: 1px; border-bottom: 2px solid #000000; animation-name: move05; animation-duration: 5s;}
+#main-section ul li span.top02.move06 {top: 270px; right: 0; width: 1560px; height: 1px; border-bottom: 2px solid #000000; animation-name: move06; animation-duration: 7s;}
+#main-section ul li span.bottom01.move07 {top: 650px; right: 0; width: 1560px; height: 1px; border-bottom: 2px solid #000000; animation-name: move07; animation-duration: 4s;}
+
+
+@-webkit-keyframes move01 {
+  0%   {height: 0;}
+  100% {height: 860px;}
+}
+
+@-webkit-keyframes move02 {
+  0%   {height: 0;}
+  100% {height: 434px;}
+}
+
+@-webkit-keyframes move03 {
+  0%   {height: 0;}
+  100% {height: 700px;}
+}
+
+@-webkit-keyframes move04 {
+  0%   {height: 0;}
+  100% {height: 700px;}
+}
+
+@-webkit-keyframes move05 {
+  0%   {width: 0;}
+  100% {width: 1560px;}
+}
+
+@-webkit-keyframes move06 {
+  0%   {width: 0;}
+  100% {width: 1560px;}
+}
+
+@-webkit-keyframes move07 {
+  0%   {width: 0;}
+  100% {width: 1560px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #main-section ul.gnb {position: absolute; top: 610px; width: 770px; height: 50px; left: 50%; transform: translate(-50%, 0);}
@@ -75,27 +132,37 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 
 #pf_F {position: relative; top: 0; width: 100%; height: 100vh; padding-top: 150px;}
 #pf_F h2 {position: relative; display: block; top: 0; text-align: center; font-size: 36px;}
-#pf_F h3 {position: relative; display: block; top: 0; text-align: center; font-size: 18px;margin-bottom: 60px;}
-#pf_F div {position: relative; left: 50%; transform: translate(-50%, 0); width: 1200px; height: 560px;}
-#pf_F div ul.box {position: absolute; top: 0; width: 1198px; height: 100%;}
-#pf_F div ul.box li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 2px solid #000; overflow: hidden; display: none;}
-#pf_F div ul.box li.on {position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 2px solid #000; overflow: hidden; display: block;}
-#pf_F div ul.box li div.left {position: absolute; width: 72.5%; height: 100%; left: 36%; display: inline-block;}
-#pf_F div ul.box li div.left h4 {position: relative; top: 0; padding-top: 20px; text-align: center; font-size: 22px;}
-#pf_F div ul.box li div.left img {position: relative; width: 90%; top: 0; left: 50%; transform: translate(-48%, 6%);}
-#pf_F div ul.box li div.right {position: absolute; width: 28%; height: 100%; top: 0; left: 86%; display: inline-block; }
-#pf_F div ul.box li div.right h5 {font-size: 22px; padding: 45px 15px 0 15px; }
-#pf_F div ul.box li div.right dl {position: relative; padding: 0 35px; width: 80%; height: 100%; }
-#pf_F div ul.box li div.right dl dt {position: relative; width: 100%; margin: 25px 0 10px 0; font-size: 18px; font-weight: 600;}
-#pf_F div ul.box li div.right dl dt::before {content: '●'; margin-right: 5px; font-size: 12px;}
-#pf_F div ul.box li div.right dl dd {position: relative; width: 100%; margin: 5px 15px; font-size: 15px;}
-#pf_F div ul.box li div.right dl dd em {font-weight: 600;}
-#pf_F div ul.box li div.right dl dd::before {content: '-'; margin-right: 5px;}
-#pf_F div ul.box li div.right ul.button {position: absolute; bottom: 65px; width: 100%; appearance: none; -webkit-appearance: none;}
-#pf_F div ul.box li div.right ul.button button {position: relative; left: 34%; transform: translate(-50%, 0); appearance: none; -webkit-appearance: none; border: none; background-color: #ffffff; border-radius: 30px; padding: 5px 10px; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);}
-#pf_F div ul.box li div.right ul.button button:hover {background-color: #000000; color: #ffffff;}
-#pf_F div ul.box li div.right ul.button button + button {margin-left: 15px;}
-#pf_F > div > p.control {position: absolute; top: 50%; transform: translate(0, -50%); width: 70%; z-index: 10000; font-size: 24px; background-color: yellowgreen;}
+#pf_F h3 {position: relative; display: block; top: 0; text-align: center; font-size: 18px; margin-bottom: 60px;}
+
+#pf_F div.box {position: relative; left: 50%; transform: translate(-50%, 0); width: 1200px; height: 565px; border: 2px solid #000;}
+#pf_F div.box div.innerbox {position: absolute; top: 0; left: 0; width: 865px; height: 560px; overflow: hidden;}
+#pf_F div.box div.innerbox ul.box-img {position: absolute; top: 0; width: 860px; height: 100%;}
+#pf_F div.box div.innerbox ul.box-img li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block;}
+#pf_F div.box div.innerbox ul.box-img li.on {display: block;}
+#pf_F div.box div.innerbox ul.box-img li div.left {position: absolute; width: 100%; height: 100%; left: 0%;}
+#pf_F div.box div.innerbox ul.box-img li div.left h4 {position: relative; top: 0; display: block; text-align: center; padding-top: 20px; font-size: 22px;}
+#pf_F div.box div.innerbox ul.box-img li div.left img {position: relative; width: 100%; top: 0; left: 0; }
+
+#pf_F div.box div.innerbox.text {position: absolute; top: 0; left: 72%; width: 340px; height: 100%;}
+#pf_F div.box div.innerbox ul.box-text {position: absolute; top: 0; width: 340px; height: 100%;}
+#pf_F div.box div.innerbox ul.box-text li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; display: none;}
+#pf_F div.box div.innerbox ul.box-text li.on {position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; display: block;}
+
+#pf_F div.box div.innerbox ul.box-text li div.right {position: absolute; width: 100%; height: 100%; top: 0; left: 0%; display: inline-block; }
+#pf_F div.box div.innerbox ul.box-text li div.right h5 {font-size: 22px; padding: 45px 15px 0 15px; }
+#pf_F div.box div.innerbox ul.box-text li div.right dl {position: relative; padding: 0 35px; width: 80%; height: 100%; }
+#pf_F div.box div.innerbox ul.box-text li div.right dl dt {position: relative; width: 100%; margin: 25px 0 10px 0; font-size: 18px; font-weight: 600;}
+#pf_F div.box div.innerbox ul.box-text li div.right dl dt::before {content: '●'; margin-right: 5px; font-size: 12px;}
+#pf_F div.box div.innerbox ul.box-text li div.right dl dd {position: relative; width: 100%; margin: 5px 15px; font-size: 15px;}
+#pf_F div.box div.innerbox ul.box-text li div.right dl dd em {font-weight: 600;}
+#pf_F div.box div.innerbox ul.box-text li div.right dl dd::before {content: '-'; margin-right: 5px;}
+
+#pf_F div.box div.innerbox ul.box-text li div.right p.button {position: absolute; bottom: 65px; left: 50%; transform: translate(-30%, 0); width: 100%; height: 50px; }
+#pf_F div.box div.innerbox ul.box-text li div.right p.button a {position: relative; float: left; padding: 5px 10px; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4); border-radius: 30px;}
+#pf_F div.box div.innerbox ul.box-text li div.right p.button a:hover {background-color: #000000; color: #ffffff;}
+#pf_F div.box div.innerbox ul.box-text li div.right p.button a + a {margin-left: 15px;}
+
+#pf_F > div > p.control {position: absolute; top: 50%; transform: translate(0, -50%); width: 70%; z-index: 10000; font-size: 24px;}
 #pf_F div p.control a {position: absolute; width: 40px; height: 40px; border-radius: 3px; background-color: #ffffff;}
 #pf_F div p.control a:hover {position: absolute; width: 40px; height: 40px; border-radius: 3px; background-color: rgba(0, 0, 0, 0.7); color: #ffffff;}
 #pf_F div p.control a.prev {left: 20px;}
@@ -109,36 +176,52 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 #pf_F div div ul.indicator > li.on > a {width: 40px; border-color: #000000; background-color: #000000;}
 
 
-#pf_E {position: relative; top: 0; width: 100%; height: 100vh;}
+#pf_E {position: relative; top: 0; width: 100%; height: 100vh; padding-top: 150px;}
 #pf_E h2 {position: relative; display: block; top: 0; text-align: center; font-size: 36px;}
 #pf_E h3 {position: relative; display: block; top: 0; text-align: center; font-size: 18px;margin-bottom: 60px;}
-#pf_E div {position: relative; left: 50%; transform: translate(-50%, 0); width: 1200px; height: 560px;}
-#pf_E div ul.box {position: absolute; top: 0; width: 1198px; height: 100%;}
-#pf_E div ul.box li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 2px solid #000; overflow: hidden; display: none;}
-#pf_E div ul.box li.on {position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 2px solid #000; overflow: hidden; display: block;}
-#pf_E div ul.box li div.right {position: absolute; width: 72.5%; height: 100%; left: 64%; display: inline-block;}
-#pf_E div ul.box li div.right h4 {position: relative; top: 0; padding-top: 20px; text-align: center; font-size: 22px;}
-#pf_E div ul.box li div.right img {position: relative; width: 90%; top: 0; left: 50%; transform: translate(-48%, 6%);}
-#pf_E div ul.box li div.left {position: absolute; width: 28%; height: 100%; top: 0; left: 14%; display: inline-block;}
-#pf_E div ul.box li div.left h5 {font-size: 22px; padding: 45px 15px 0 45px; }
-#pf_E div ul.box li div.left dl {position: relative; padding: 50px 65px; width: 80%; height: 100%; }
-#pf_E div ul.box li div.left dl dt {position: relative; width: 100%; margin: 25px 0 10px 0; font-size: 18px; font-weight: 600;}
-#pf_E div ul.box li div.left dl dt::before {content: '●'; margin-right: 5px; font-size: 12px;}
-#pf_E div ul.box li div.left dl dd {position: relative; width: 80%; margin: 5px 15px; font-size: 15px;}
-#pf_E div ul.box li div.left dl dd em {font-weight: 600;}
-#pf_E div ul.box li div.left dl dd::before {content: '-'; margin-right: 5px;}
-#pf_E > div > p.control {position: absolute; top: 50%; right: 20px; transform: translate(0, -50%); width: 70%; z-index: 10000; font-size: 24px;}
+
+
+#pf_E div.box {position: relative; left: 50%; transform: translate(-50%, 0); width: 1200px; height: 565px; overflow: hidden; border: 2px solid #000;}
+#pf_E div.box div.innerbox {position: absolute; top: 0; right: 0; width: 865px; height: 560px;  overflow: hidden;}
+#pf_E div.box div.innerbox ul.box-img {position: absolute; top: 0; width: 860px; height: 100%; }
+#pf_E div.box div.innerbox ul.box-img li {position: absolute; right: 0; top: 0; width: 100%; height: 100%;  display: none;}
+#pf_E div.box div.innerbox ul.box-img li.on {position: absolute; right: 0; top: 0; width: 100%; height: 100%; display: block;}
+#pf_E div.box div.innerbox ul.box-img li div.right {position: absolute; width: 100%; height: 100%; right: 0%;}
+#pf_E div.box div.innerbox ul.box-img li div.right h4 {position: relative; top: 0; display: block; text-align: center; padding-top: 20px; font-size: 22px;}
+#pf_E div.box div.innerbox ul.box-img li div.right img {position: relative; width: 100%; top: 0; right: 0; }
+
+#pf_E div.box div.innerbox.text {position: absolute; top: 0; left: 0; width: 340px; height: 100%;}
+#pf_E div.box div.innerbox ul.box-text {position: absolute; top: 0; width: 340px; height: 100%;}
+#pf_E div.box div.innerbox ul.box-text li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; display: none;}
+#pf_E div.box div.innerbox ul.box-text li.on {position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; display: block;}
+
+#pf_E div.box div.innerbox ul.box-text li div.left {position: absolute; width: 100%; height: 100%; top: 0; left: 0%; display: inline-block; }
+#pf_E div.box div.innerbox ul.box-text li div.left h5 {font-size: 22px; padding: 45px 15px 0 25px; }
+#pf_E div.box div.innerbox ul.box-text li div.left dl {position: relative; padding: 0 60px; width: 80%; height: 100%; }
+#pf_E div.box div.innerbox ul.box-text li div.left dl dt {position: relative; width: 100%; margin: 25px 0 10px 0; font-size: 18px; font-weight: 600;}
+#pf_E div.box div.innerbox ul.box-text li div.left dl dt::before {content: '●'; margin-right: 5px; font-size: 12px;}
+#pf_E div.box div.innerbox ul.box-text li div.left dl dd {position: relative; width: 100%; margin: 5px 15px; font-size: 15px;}
+#pf_E div.box div.innerbox ul.box-text li div.left dl dd em {font-weight: 600;}
+#pf_E div.box div.innerbox ul.box-text li div.left dl dd::before {content: '-'; margin-right: 5px;}
+
+#pf_E div.box div.innerbox ul.box-text li div.left p.button {position: absolute; bottom: 65px; left: 50%; transform: translate(-30%, 0); width: 100%; height: 50px; }
+#pf_E div.box div.innerbox ul.box-text li div.left p.button a {position: relative; float: left; padding: 5px 10px; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4); border-radius: 30px;}
+#pf_E div.box div.innerbox ul.box-text li div.left p.button a:hover {background-color: #000000; color: #ffffff;}
+#pf_E div.box div.innerbox ul.box-text li div.left p.button a + a {margin-left: 15px;}
+
+#pf_E > div > p.control {position: absolute; top: 50%; right: 20px; transform: translate(0, -50%); width: 72%; z-index: 10000; font-size: 24px;}
 #pf_E div p.control a {position: absolute; width: 40px; height: 40px; border-radius: 3px; background-color: #ffffff;}
 #pf_E div p.control a:hover {position: absolute; width: 40px; height: 40px; border-radius: 3px; background-color: rgba(0, 0, 0, 0.7); color: #ffffff;}
 #pf_E div p.control a.prev {left: 20px;}
 #pf_E div p.control a.prev i {position: relative; left: 50%; top: 26%; transform: translate(-50%, -50%);}
 #pf_E div p.control a.next {right: 0;}
 #pf_E div p.control a.next i {position: relative; right: -50%; top: 26%; transform: translate(-50%, -50%);}
-#pf_E div div ul.indicator {position: absolute; bottom: 10px; display: block; width: 73%; height: 30px; right: 0; text-align: center; line-height: 30px;}
+#pf_E div div ul.indicator {position: absolute; right: 0; bottom: 10px; display: block; width: 73%; height: 30px; text-align: center; line-height: 30px;}
 #pf_E div div ul.indicator > li {display: inline-block; vertical-align: top;}
 #pf_E div div ul.indicator > li + li {margin-left: 8px;}
 #pf_E div div ul.indicator > li > a {display: inline-block; width: 10px; height: 10px; border: 2px solid #000000; border-radius: 40px; text-indent: -9999px; overflow: hidden; background-color: #ffffff;}
 #pf_E div div ul.indicator > li.on > a {width: 40px; border-color: #000000; background-color: #000000;}
+
 
 
 #about {position: relative; top: 0; width: 100%; height: 100vh;}
