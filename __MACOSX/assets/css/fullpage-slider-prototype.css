@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap');
+
+
+body {
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+  color: #222;
+  margin: 0;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+section h1 {
+  font-size: 3.0em;
+}
+
+.container {
+  /* border: 1px solid #f00; */
+}
+
+input[name="slider"] {
+  display: none;
+}
+
+.btn {
+  position: fixed;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.btn label {
+  display: inline-block;
+  width: 50px; 
+  height: 5px;
+  margin: 0 1px;
+  background: #e1e1e1;
+  box-sizing: border-box;
+  text-indent: -300px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5;
+}
+
+input[id="slide1"]:checked ~ .btn label[for="slide1"],
+input[id="slide2"]:checked ~ .btn label[for="slide2"],
+input[id="slide3"]:checked ~ .btn label[for="slide3"] {
+  background: #000;
+}
+
+.slides-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.slides {
+  /* border: 1px solid #f00; */
+  height: 100vh;
+  width: 300%;
+  position: absolute;
+  left: 0; top: 0;
+  transition: 0.5s;
+}
+
+.slides section {
+  /* border: 1px solid #00f; */
+  height: 100vh;
+  width: 33.3333%;
+  float: left;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides section:nth-child(1) {
+  background: lightcoral;
+}
+.slides section:nth-child(2) {
+  background: lightseagreen;
+}
+.slides section:nth-child(3) {
+  background: lightslategrey;
+}
+
+input[id="slide1"]:checked ~ .slides-wrap .slides {
+  left: 0;
+}
+input[id="slide2"]:checked ~ .slides-wrap .slides {
+  left: -100%;
+}
+input[id="slide3"]:checked ~ .slides-wrap .slides {
+  left: -200%;
+}

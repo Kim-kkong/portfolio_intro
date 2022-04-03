@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forest Kim</title>
+
+<link rel="stylesheet" href="myassets/css/mycss.css">
+<link rel="stylesheet" type="text/css" href="myassets/css/jquery.fullPage.css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+
+
+
+
+<body>
+
+<!--   <div class="loading-area">
+    <img class="loading-image" src="https://i.gifer.com/28Ld.gif" alt="로딩">
+    <div class="loading">Plz wait :)</div>
+  </div>
+ -->
+  <div class="nav">
+    <h1><a href="#home" class="name">KIMSOOBIN</a></h1>
+    <ul class="gnb tabItem">
+      <li><a href="#home" class="on">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#mystatus">STATUS</a></li>
+      <li><a href="#mypf">PORTFOLIO</a></li>
+      <li><a href="#cont">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <div id="fullpage">
+    <section class="section">
+      <div class="home">
+        <ul>
+          <li>Hello, World :)</li>
+          <li>I'm Soobin KIM.</li>
+          <li>Welcome to my forest.</li>
+        </ul>
+        <div class="scroll_down"></div>
+      </div>
+    </section>
+
+
+
+    <section class="section">
+      <h2 class="subtitle">ABOUT</h2>
+      <div class="about-wrap"> 
+        <dl class="content-box">
+          <dt>이름</dt>
+          <dd>김수빈</dd>
+
+          <dt>생년월일</dt>
+          <dd>1991년 06월 15일 서울시 출생</dd>
+
+          <dt>학력</dt>
+          <dd>동덕여자대학교 경영학과 졸업</dd>
+
+          <dt>교육사항</dt>
+          <dd>2021.09 ~ 2021.12 아카데미정글 웹디자인&퍼블리싱 과정 수료</dd>
+          <dd>2022.01 ~ 2022.04 아카데미정글 디노스쿨 3기(프론트엔드 과정) 수료</dd>
+        </dl>
+
+        <div class=skill>
+          <h3>스킬</h3>
+          <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+            <li>JQuery</li>
+            <li>AdobeXD</li>
+            <li>Figma</li>
+            <li>MS powerpoint</li>
+            <li>MS Word</li>
+            <li>MS excel</li>
+            <li>React</li>
+            <li>Vue.js</li>
+            <li>Node.js</li>
+            <li>Flutter</li>
+          </ul>
+        </div>
+
+        <div class="nature">
+          <h3>성격</h3>
+          <ul>
+            <li>끈기</li>
+            <li>근성</li>
+            <li>꾸준함</li>
+            <li>성격급한</li>
+            <li>겁이없는</li>
+            <li>호기심많은</li>
+            <li>끝을보는</li>
+            <li>체계적인</li>
+            <li>융통성있는</li>
+            <li>외성내향</li>
+            <li>직관적</li>
+            <li>현실적</li>
+            <li>동물덕후</li>
+            <li>집중력있는</li>
+          </ul>
+        </div>
+
+        <dl class="like">
+          <dt>좋아하는 것</dt>
+            <dd>반지의제왕</dd>
+            <dd>해리포터</dd>
+            <dd>동물</dd>
+            <dd>침대위에 누워있기</dd>
+            <dd>타로카드</dd>
+            <dd>소설보기</dd>
+            <dd>계획세우기</dd>
+            <dd>버킷리스트 작성하기</dd>
+
+          <dt>잘하는 것</dt>
+            <dd>오늘은 뭐볼까 생각하며 넷플릭스 메인화면 쳐다보기</dd>
+            <dd>반려견들에게 애정 구걸하기</dd>
+
+          <dt>싫어하는 것</dt>
+            <dd>벌.레.</dd>
+            <dd>잔인한 것</dd>
+            <dd>공포영화</dd>
+        </dl>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="mystats">
+
+        <h2 class="subtitle">STATS</h2>
+
+        <div id="container" style="height: 65%">
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+          <!-- Uncomment this line if you want to dataTool extension
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/extension/dataTool.min.js"></script>
+          -->
+          <!-- Uncomment this line if you want to use gl extension
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+          -->
+          <!-- Uncomment this line if you want to echarts-stat extension
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+          -->
+          <!-- Uncomment this line if you want to use map
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/map/js/china.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/map/js/world.js"></script>
+          -->
+          <!-- Uncomment these two lines if you want to use bmap extension
+          <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=<Your Key Here>"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@{{version}}/dist/extension/bmap.min.js"></script>
+          -->
+
+          <script type="text/javascript">
+            var dom = document.getElementById("container");
+            var myChart = echarts.init(dom);
+            var app = {};
+
+            var option;
+
+
+
+            option = {
+            legend: {
+              data: ['NOW', 'PURPOSE']
+            },
+            radar: {
+              // shape: 'circle',
+              indicator: [
+                { name: 'Planning', max: 10000 },
+                { name: 'HTML', max: 10000 },
+                { name: 'CSS', max: 10000 },
+                { name: 'Javascript', max: 10000},
+                { name: 'DB/API', max: 10000 },
+                { name: 'ETC', max: 10000 }
+              ]
+            },
+            series: [
+              {
+                name: 'Now vs Purpose',
+                type: 'radar',
+                data: [
+                  {
+                    value: [8000, 7000, 5000, 4000, 1000, 8000],
+                    name: 'Now'
+                  },
+                  {
+                    value: [9000, 9000, 8000, 9000, 6000, 9000],
+                    name: 'Purpose'
+                  }
+                ]
+              }
+            ]
+            };
+
+            if (option && typeof option === 'object') {
+              myChart.setOption(option);
+            }
+
+          </script>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <h2 class="subtitle">PORTFOLIO</h2>
+      <div class="mypf">
+        <section class="slides">
+          <img class="visitseoul" src="myassets/img/pf1.png" alt="visit seoul">
+          <dl class="pftext">
+            <dt>이름</dt>
+              <dd>Visit Seoul</dd>
+            <dt>종류</dt>
+              <dd>개인프로젝트</dd>
+            <dt>기여도</dt>
+              <dd>html 100%</dd>
+              <dd>CSS 100%</dd>
+              <dd>Javascript 100%</dd>
+          </dl>
+          <div class="button">
+            <button>GO TO THE WEB SITE</button>
+            <button>GO TO THE GITHUB</button>
+          </div>
+        </section>
+
+        <section class="slides">
+          <img class="neowiz" src="myassets/img/pf1.png" alt="NEOWIZ">
+          <dl class="pftext">
+            <dt>이름</dt>
+              <dd>네오위즈</dd>
+            <dt>종류</dt>
+              <dd>개인프로젝트</dd>
+            <dt>기여도</dt>
+              <dd>html 100%</dd>
+              <dd>CSS 100%</dd>
+              <dd>Javascript 100%</dd>
+          </dl>
+          <div class="button">
+            <button>GO TO THE WEB SITE</button>
+            <button>GO TO THE GITHUB</button>
+          </div>
+        </section>
+
+        <section class="slides">
+          <img class="allfresh" src="myassets/img/pf1.png" alt="ALLFRESH">
+          <dl class="pftext">
+            <dt>이름</dt>
+              <dd>올프레쉬</dd>
+            <dt>종류</dt>
+              <dd>개인프로젝트</dd>
+            <dt>기여도</dt>
+              <dd>html 100%</dd>
+              <dd>CSS 100%</dd>
+              <dd>Javascript 100%</dd>
+          </dl>
+          <div class="button">
+            <button>GO TO THE WEB SITE</button>
+            <button>GO TO THE GITHUB</button>
+          </div>
+        </section>
+
+        <section class="slides">
+          <img class="moipan" src="myassets/img/pf1.png" alt="MOIPAN">
+          <dl class="pftext">
+            <dt>이름</dt>
+              <dd>모이판</dd>
+            <dt>종류</dt>
+              <dd>공동프로젝트</dd>
+            <dt>역할</dt>
+              <dd>기획 및 디자인 (+문서담당)</dd>
+            <dt>프레임워크</dt>
+              <dd>플러터</dd>
+            <dt>디자인 툴</dt>
+              <dd>Adobe XD</dd> 
+            <dt>기여도</dt>
+              <dd>기획 90%</dd>
+              <dd>문서작업 90%</dd>
+              <dd>ul/ux 디자인 100%</dd>
+              <dd>프론트엔드 5%</dd>
+          </dl>
+          <div class="button">
+            <button>GO TO THE WEB SITE</button>
+            <button>GO TO THE GITHUB</button>
+          </div>
+        </section>
+
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+  
+        <div class="btn">
+          <label for="slide1">s1</label>
+          <label for="slide2">s2</label>
+          <label for="slide3">s3</label>
+          <label for="slide3">s4</label>
+        </div>
+      </div>     
+    </section>
+
+
+
+    <section class="section">
+      <h2 class="subtitle">CONTACT</h2>
+      <div class="cont">
+
+
+
+
+      </div>
+      
+    </section>
+
+  </div>
+
+ <script>
+  $(document).ready(function() {
+
+      setTimeout(function(){
+        $('.loading-area').hide();
+      }, 2400)
+   
+      $('#fullpage').fullpage({
+          menu: '#shape-home',
+          anchors: ['shape-home','info-about','mystats','mypf','cont'],
+          sectionsColor: ['black','black','black','black','black'],
+          navigation: true,
+          navigationPosition: 'right',
+          slidesNavigation: true,
+          autoScrolling: true,
+      });
+
+          $('.tabItem').click(function() {
+      $(this).parent().find('.tabItem').removeClass('isActive');
+      $(this).addClass('isActive');
+    })
+  });
+  </script>
+</body>
+</html>

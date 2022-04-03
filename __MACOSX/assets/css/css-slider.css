@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap');
+
+
+body {
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 400;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.slide-container {
+  /* border: 1px solid #f00; */
+  position: relative;
+  text-align: center;
+
+}
+
+input[name="slider"] {
+  display: none;
+}
+.btn {
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+  width: 100%;
+}
+
+.btn label {
+  display: inline-block;
+  width: 15px; 
+  height: 15px;
+  margin: 0 5px;
+  background: #e1e1e1;
+  box-sizing: border-box;
+  text-indent: -300px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5;
+}
+
+input[id="slide1"]:checked ~ .btn label[for="slide1"],
+input[id="slide2"]:checked ~ .btn label[for="slide2"],
+input[id="slide3"]:checked ~ .btn label[for="slide3"] {
+  background: royalblue;
+  border-radius: 50%;
+}
+
+.slides-wrap {
+  /* border: 1px solid #00f; */
+  width: 800px; 
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  width: 2400px;
+  height: inherit;
+  position: absolute;
+  left: 0; top: 0;
+  transition: 0.5s;
+}
+
+.slides div {
+  /* border: 1px solid #f0f; */
+  width: 800px;
+  height: inherit;
+  float: left;
+  box-sizing: border-box;
+}
+
+input[id="slide1"]:checked ~ .slides-wrap .slides {
+  left: 0;
+}
+input[id="slide2"]:checked ~ .slides-wrap .slides {
+  left: -800px;
+}
+input[id="slide3"]:checked ~ .slides-wrap .slides {
+  left: -1600px;
+}
+
+.slides .content {
+  padding: 40px;
+  text-align: center;
+}
+.slides .content figure {
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slides .content p {
+  margin-top: 30px;
+}
+.slides .content p + p {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.slides .content p + p span {
+  font-weight: 400;
+  color: orange;
+  display: block;
+  font-size: 14px;
+}
