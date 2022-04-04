@@ -26,7 +26,7 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.7); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 10000;}
 #skip-nav:focus {top: 0;}
 
-#header {position: fixed; width: 100%; height: 80px; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); z-index: 100000; background-color: #ffffff;}
+#header {position: fixed; width: 100%; height: 80px; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); z-index: 100000; background-color: #ffffff; transition: all 0.5s;}
 #header.on {position: fixed; width: 100%; height: 50px; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); z-index: 100000; background-color: #ffffff;}
 #header.on #nav {position: relative; width: 1200px; height: 80px; top: 0; left: 50%; transform: translate(-50%, 0);}
 #header.on #nav ul.gnb {position: absolute; right: 0; top: 15px;}
@@ -62,7 +62,6 @@ body.no-scroll {height: 100vh; overflow: hidden;}
   50%{border-right: 1px solid #000} 
   100%{border-right: 1px solid #fff} 
 }
-
 
 
 #main-section ul li span {position: absolute; text-indent: -9999px;}
@@ -109,18 +108,6 @@ body.no-scroll {height: 100vh; overflow: hidden;}
   0%   {width: 0;}
   100% {width: 1560px;}
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #main-section ul.gnb {position: absolute; top: 610px; width: 770px; height: 50px; left: 50%; transform: translate(-50%, 0);}
@@ -223,23 +210,59 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 #pf_E div div ul.indicator > li.on > a {width: 40px; border-color: #000000; background-color: #000000;}
 
 
-
 #about {position: relative; top: 0; width: 100%; height: 100vh;}
-#about h2 {position: relative; display: block; top: 0; text-align: center; font-size: 36px;}
-#about span.middle {position: absolute; width: 1px; height: 95%; top: 55%; left: 50%; transform: translate(0, -50%); border-right: 3px solid #000000; text-indent: -9999px;}
+#about h2 {position: relative; display: block; top: 0; text-align: center; font-size: 36px; }
+#about span.middle {position: absolute; width: 1px; height: 95%; top: 55%; left: 50%; transform: translate(0, -50%); border-right: 3px solid #000000; text-indent: -9999px; animation-name: move08; animation-duration: 3s;}
 #about ul.line {position: absolute; width: 10%; height: 100%; left: 50%; top: 150px; transform: translate(-50%, 0);}
 #about ul.line li {position: absolute; width: 155px; height: 1px; border-bottom: 3px solid #000000; left: -57px; top: 10%;}
-#about ul.line li:nth-child(1) {width: 400px; left: -302px;}
-#about ul.line li:nth-child(2) {top: 30%; left: 51%;}
-#about ul.line li:nth-child(3) {top: 50%;}
-#about ul.line li:nth-child(4) {top: 70%; left: 51%; width: 400px;}
+#about ul.line li:nth-child(1) {width: 400px; left: -302px; animation-name: move09; animation-duration: 4s;}
+#about ul.line li:nth-child(2) {top: 30%; left: 51%; animation-name: move10; animation-duration: 4s;}
+#about ul.line li:nth-child(3) {top: 50%; animation-name: move11; animation-duration: 4s; }
+#about ul.line li:nth-child(4) {top: 70%; left: 51%; width: 400px; animation-name: move12; animation-duration: 6s;}
 
 #about ul.line li span {position: absolute; text-indent: -99999px;}
+
+
+@-webkit-keyframes move08 {
+  0%   {height: 0; top: 5%;}
+  100% {height: 100%;}
+}
+
+@-webkit-keyframes move09 {
+  0%   {width: 0; left: 100px;}
+  100% {width: 400px; left: -302px;}
+}
+
+@-webkit-keyframes move10 {
+  0%   {width: 0;}
+  100% {width: 155px;}
+}
+
+@-webkit-keyframes move11 {
+  0%   {width: 0; left: 60px;}
+  100% {width: 155px; left: -50px;}
+}
+
+@-webkit-keyframes move12 {
+  0%   {width: 0;}
+  100% {width: 400px;}
+}
+
+
+
+
 #about div ul li {position: absolute; width: 450px; height: 250px; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);}
 #about div ul li:nth-child(1) {top: 13%; left: 105px;}
 #about div ul li:nth-child(2) {top: 53%; left: 350px;}
 #about div ul li:nth-child(3) {top: 33%; right: 343px;}
 #about div ul li:nth-child(4) {top: 73%; right: 98px;}
+
+
+
+
+
+
+
 
 
 #contact {position: relative; top: 0; width: 100%; height: 50vh; padding-top: 50px;}

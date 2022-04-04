@@ -2,7 +2,25 @@
 $(document).ready(function() {
   preventDefaultAnchor();
 
+  checkScroll();
+  $(window).on('scroll', function() {
+    checkScroll();
+  });
 
+  function checkScroll() {
+    var scrollAmt = $(document).scrollTop();
+    if (scrollAmt > 200) {
+      $('#header').addClass('on');
+    } else {
+      $('#header').removeClass('on');
+    }
+  }
+
+
+
+
+
+//타이핑
   var typingBool = false; 
   var typingIdx=0; 
   var liIndex = 0;
@@ -19,7 +37,7 @@ $(document).ready(function() {
     if(typingIdx < typingTxt.length){ 
        $(".typing").append(typingTxt[typingIdx]); 
        typingIdx++; 
-     } else{
+     } else {
 
        if(liIndex >= liLength-1){
          liIndex = 0;
