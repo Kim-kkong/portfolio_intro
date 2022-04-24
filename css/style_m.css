@@ -24,3 +24,279 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 15px; color: #333333; ba
 #wrapper {max-width: 1024px; overflow: hidden;}
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.7); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 10000;}
 #skip-nav:focus {top: 0;}
+
+#header {position: fixed; width: 100%; height: 80px; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); z-index: 100000; background-color: #ffffff; transition: all 0.5s;}
+#header.on {position: fixed; width: 100%; height: 50px; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); z-index: 100000; background-color: #ffffff;}
+#header.on #nav {position: relative; width: 1200px; height: 80px; top: 0; left: 50%; transform: translate(-50%, 0);}
+#header.on #nav ul.gnb {position: absolute; right: 0; top: 15px;}
+#header.on div.header-box div.side {display: none;}
+
+
+#header div.header-box h1 {position: absolute; bottom: 0; left: 10%; display: inline-block; font-size: 24px; font-weight: 600;}
+#nav {position: relative; max-width: 1200px; width: 60%; height: 80px; top: 0; left: 50%; transform: translate(-50%, 0);}
+#nav ul.gnb {position: absolute; right: 0; bottom: 0; }
+#nav ul.gnb li {float: left; font-size: 18px; bottom: 0; font-weight: 400; padding: 5px 10px;}
+#nav ul.gnb li:hover {float: left; font-size: 18px; bottom: 0; font-weight: 600; }
+#nav ul.gnb li:hover::before {position: absolute; top: 0; content: ''; width: 5px; height: 5px; border: 1px solid #000000; background-color: #000000; border-radius: 100px;}
+#nav ul.gnb li + li {margin-left: 40px;}
+
+#nav ul.gnb li:nth-child(1):hover::before {left: 12%;}
+#nav ul.gnb li:nth-child(2):hover::before {left: 43%;}
+#nav ul.gnb li:nth-child(3):hover::before {left: 68.5%;}
+#nav ul.gnb li:nth-child(4):hover::before {left: 91%;}
+#header div.header-box div.side {position: absolute; bottom: 5px; right: 8%; display: none;}
+#header div.header-box div.side ul {position: relative; width: 140px; height: 36px; font-size: 22px; border: 1px solid #ffe600; border-radius: 30px; background-color: #ffe600; padding: 1px;}
+#header div.header-box div.side ul li {float: left; margin-left: 19px; vertical-align: middle;}
+
+
+#main {}
+#main-section {position: relative; top: 80px; width: 100%; height: 92vh;}
+#main-section div.typing-txt {display: none;}
+#main-section div.typing-txt ul li {font-size: 26px; font-weight: 600;}
+#main-section div.typing-txt ul{list-style:none;}
+#main-section p.typing {position: relative; left: 50%; top: 40%; transform: translate(-50%, 0); font-size: 36px; font-weight: 600; text-align: center; display: inline-block; animation-name: cursor; animation-duration: 0.3s; animation-iteration-count: infinite;} 
+
+@keyframes cursor{ 
+  0%{border-right: 1px solid #fff} 
+  50%{border-right: 1px solid #000} 
+  100%{border-right: 1px solid #fff} 
+}
+
+
+#main-section ul li span {position: absolute; text-indent: -9999px;}
+#main-section ul li span.right01.move01 {top: 0; left: 415px; width: 1px; height: 860px; border-right: 2px solid #000000; animation-name: move01; animation-duration: 4s;}
+#main-section ul li span.right02.move02 {top: 0; left: 471px; width: 1px; height: 434px; border-right: 2px solid #000000; animation-name: move02; animation-duration: 5s;}
+#main-section ul li span.left01.move03 {bottom: 0; left: 1446px; width: 1px; height: 700px; border-left: 2px solid #000000; animation-name: move03; animation-duration: 6s;}
+#main-section ul li span.left02.move04 {bottom: 0; left: 1505px; width: 1px; height: 700px; border-left: 2px solid #000000; animation-name: move04; animation-duration: 4s;}
+#main-section ul li span.top01.move05 {top: 220px; left: 0; width: 1560px; height: 1px; border-bottom: 2px solid #000000; animation-name: move05; animation-duration: 5s;}
+#main-section ul li span.top02.move06 {top: 270px; right: 0; width: 1560px; height: 1px; border-bottom: 2px solid #000000; animation-name: move06; animation-duration: 7s;}
+#main-section ul li span.bottom01.move07 {top: 650px; right: 0; width: 1560px; height: 1px; border-bottom: 2px solid #000000; animation-name: move07; animation-duration: 4s;}
+
+
+@-webkit-keyframes move01 {
+  0%   {height: 0;}
+  100% {height: 860px;}
+}
+
+@-webkit-keyframes move02 {
+  0%   {height: 0;}
+  100% {height: 434px;}
+}
+
+@-webkit-keyframes move03 {
+  0%   {height: 0;}
+  100% {height: 700px;}
+}
+
+@-webkit-keyframes move04 {
+  0%   {height: 0;}
+  100% {height: 700px;}
+}
+
+@-webkit-keyframes move05 {
+  0%   {width: 0;}
+  100% {width: 1560px;}
+}
+
+@-webkit-keyframes move06 {
+  0%   {width: 0;}
+  100% {width: 1560px;}
+}
+
+@-webkit-keyframes move07 {
+  0%   {width: 0;}
+  100% {width: 1560px;}
+}
+
+
+#main-section ul.gnb {position: absolute; top: 610px; width: 770px; height: 50px; left: 50%; transform: translate(-50%, 0);}
+#main-section ul.gnb li {float: left; float: left; font-size: 18px; bottom: 0; font-weight: 400; padding: 5px 10px;}
+#main-section ul.gnb li:first-child {font-weight: 700;}
+#main-section ul.gnb li:first-child::before {position: absolute; top: 0; content: ''; width: 5px; height: 5px; left: 7.5%; border: 1px solid #000000; background-color: #000000; border-radius: 100px;}
+#main-section ul.gnb li + li {margin-left: 40px;}
+
+
+#pf_F {position: relative; top: 0; width: 100%; height: 100vh; padding-top: 150px;}
+#pf_F h2 {position: relative; display: block; top: 0; text-align: center; font-size: 36px;}
+#pf_F h3 {position: relative; display: block; top: 0; text-align: center; font-size: 18px; margin-bottom: 60px;}
+
+#pf_F div.box {position: relative; left: 50%; transform: translate(-50%, 0); width: 1200px; height: 565px; border: 2px solid #000;}
+#pf_F div.box div.innerbox {position: absolute; top: 0; left: 0; width: 865px; height: 560px; overflow: hidden;}
+#pf_F div.box div.innerbox ul.box-img {position: absolute; top: 0; width: 860px; height: 100%;}
+#pf_F div.box div.innerbox ul.box-img li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block;}
+#pf_F div.box div.innerbox ul.box-img li.on {display: block;}
+#pf_F div.box div.innerbox ul.box-img li div.left {position: absolute; width: 100%; height: 100%; left: 0%;}
+#pf_F div.box div.innerbox ul.box-img li div.left h4 {position: relative; top: 0; display: block; text-align: center; padding-top: 20px; font-size: 22px;}
+#pf_F div.box div.innerbox ul.box-img li div.left img {position: relative; width: 100%; top: 0; left: 0; }
+
+#pf_F div.box div.innerbox.text {position: absolute; top: 0; left: 72%; width: 340px; height: 100%;}
+#pf_F div.box div.innerbox ul.box-text {position: absolute; top: 0; width: 340px; height: 100%;}
+#pf_F div.box div.innerbox ul.box-text li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; display: none;}
+#pf_F div.box div.innerbox ul.box-text li.on {position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; display: block;}
+
+#pf_F div.box div.innerbox ul.box-text li div.right {position: absolute; width: 100%; height: 100%; top: 0; left: 0%; display: inline-block; }
+#pf_F div.box div.innerbox ul.box-text li div.right h5 {font-size: 22px; padding: 45px 15px 0 15px; }
+#pf_F div.box div.innerbox ul.box-text li div.right dl {position: relative; padding: 0 35px; width: 80%; height: 100%; }
+#pf_F div.box div.innerbox ul.box-text li div.right dl dt {position: relative; width: 100%; margin: 25px 0 10px 0; font-size: 18px; font-weight: 600;}
+#pf_F div.box div.innerbox ul.box-text li div.right dl dt::before {content: '●'; margin-right: 5px; font-size: 12px;}
+#pf_F div.box div.innerbox ul.box-text li div.right dl dd {position: relative; width: 100%; margin: 5px 15px; font-size: 15px;}
+#pf_F div.box div.innerbox ul.box-text li div.right dl dd em {font-weight: 600;}
+#pf_F div.box div.innerbox ul.box-text li div.right dl dd::before {content: '-'; margin-right: 5px;}
+
+#pf_F div.box div.innerbox ul.box-text li div.right p.button {position: absolute; bottom: 65px; left: 50%; transform: translate(-30%, 0); width: 100%; height: 50px; }
+#pf_F div.box div.innerbox ul.box-text li div.right p.button a {position: relative; float: left; padding: 5px 10px; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4); border-radius: 30px;}
+#pf_F div.box div.innerbox ul.box-text li div.right p.button a:hover {background-color: #000000; color: #ffffff;}
+#pf_F div.box div.innerbox ul.box-text li div.right p.button a + a {margin-left: 15px;}
+
+#pf_F > div > p.control {position: absolute; top: 50%; transform: translate(0, -50%); width: 70%; z-index: 10000; font-size: 24px;}
+#pf_F div p.control a {position: absolute; width: 40px; height: 40px; border-radius: 3px; background-color: #ffffff;}
+#pf_F div p.control a:hover {position: absolute; width: 40px; height: 40px; border-radius: 3px; background-color: rgba(0, 0, 0, 0.7); color: #ffffff;}
+#pf_F div p.control a.prev {left: 20px;}
+#pf_F div p.control a.prev i {position: relative; left: 50%; top: 26%; transform: translate(-50%, -50%);}
+#pf_F div p.control a.next {right: 0;}
+#pf_F div p.control a.next i {position: relative; right: -50%; top: 26%; transform: translate(-50%, -50%);}
+#pf_F div div ul.indicator {position: absolute; bottom: 10px; display: block; width: 73%; height: 30px; text-align: center; line-height: 30px;}
+#pf_F div div ul.indicator > li {display: inline-block; vertical-align: top;}
+#pf_F div div ul.indicator > li + li {margin-left: 8px;}
+#pf_F div div ul.indicator > li > a {display: inline-block; width: 10px; height: 10px; border: 2px solid #000000; border-radius: 40px; text-indent: -9999px; overflow: hidden; background-color: #ffffff;}
+#pf_F div div ul.indicator > li.on > a {width: 40px; border-color: #000000; background-color: #000000;}
+
+
+#pf_E {position: relative; top: 0; width: 100%; height: 100vh; padding-top: 150px;}
+#pf_E h2 {position: relative; display: block; top: 0; text-align: center; font-size: 36px;}
+#pf_E h3 {position: relative; display: block; top: 0; text-align: center; font-size: 18px;margin-bottom: 60px;}
+
+
+#pf_E div.box {position: relative; left: 50%; transform: translate(-50%, 0); width: 1200px; height: 565px; overflow: hidden; border: 2px solid #000;}
+#pf_E div.box div.innerbox {position: absolute; top: 0; right: 0; width: 865px; height: 560px;  overflow: hidden;}
+#pf_E div.box div.innerbox ul.box-img {position: absolute; top: 0; width: 860px; height: 100%; }
+#pf_E div.box div.innerbox ul.box-img li {position: absolute; right: 0; top: 0; width: 100%; height: 100%;  display: none;}
+#pf_E div.box div.innerbox ul.box-img li.on {position: absolute; right: 0; top: 0; width: 100%; height: 100%; display: block;}
+#pf_E div.box div.innerbox ul.box-img li div.right {position: absolute; width: 100%; height: 100%; right: 0%;}
+#pf_E div.box div.innerbox ul.box-img li div.right h4 {position: relative; top: 0; display: block; text-align: center; padding-top: 20px; font-size: 22px;}
+#pf_E div.box div.innerbox ul.box-img li div.right img {position: relative; width: 100%; top: 0; right: 0; }
+
+#pf_E div.box div.innerbox.text {position: absolute; top: 0; left: 0; width: 340px; height: 100%;}
+#pf_E div.box div.innerbox ul.box-text {position: absolute; top: 0; width: 340px; height: 100%;}
+#pf_E div.box div.innerbox ul.box-text li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; display: none;}
+#pf_E div.box div.innerbox ul.box-text li.on {position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; display: block;}
+
+#pf_E div.box div.innerbox ul.box-text li div.left {position: absolute; width: 100%; height: 100%; top: 0; left: 0%; display: inline-block; }
+#pf_E div.box div.innerbox ul.box-text li div.left h5 {font-size: 22px; padding: 45px 15px 0 25px; }
+#pf_E div.box div.innerbox ul.box-text li div.left dl {position: relative; padding: 0 60px; width: 80%; height: 100%; }
+#pf_E div.box div.innerbox ul.box-text li div.left dl dt {position: relative; width: 100%; margin: 25px 0 10px 0; font-size: 18px; font-weight: 600;}
+#pf_E div.box div.innerbox ul.box-text li div.left dl dt::before {content: '●'; margin-right: 5px; font-size: 12px;}
+#pf_E div.box div.innerbox ul.box-text li div.left dl dd {position: relative; width: 100%; margin: 5px 15px; font-size: 15px;}
+#pf_E div.box div.innerbox ul.box-text li div.left dl dd em {font-weight: 600;}
+#pf_E div.box div.innerbox ul.box-text li div.left dl dd::before {content: '-'; margin-right: 5px;}
+
+#pf_E div.box div.innerbox ul.box-text li div.left p.button {position: absolute; bottom: 65px; left: 50%; transform: translate(-30%, 0); width: 100%; height: 50px; }
+#pf_E div.box div.innerbox ul.box-text li div.left p.button a {position: relative; float: left; padding: 5px 10px; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4); border-radius: 30px;}
+#pf_E div.box div.innerbox ul.box-text li div.left p.button a:hover {background-color: #000000; color: #ffffff;}
+#pf_E div.box div.innerbox ul.box-text li div.left p.button a + a {margin-left: 15px;}
+
+#pf_E > div > p.control {position: absolute; top: 50%; right: 20px; transform: translate(0, -50%); width: 72%; z-index: 10000; font-size: 24px;}
+#pf_E div p.control a {position: absolute; width: 40px; height: 40px; border-radius: 3px; background-color: #ffffff;}
+#pf_E div p.control a:hover {position: absolute; width: 40px; height: 40px; border-radius: 3px; background-color: rgba(0, 0, 0, 0.7); color: #ffffff;}
+#pf_E div p.control a.prev {left: 20px;}
+#pf_E div p.control a.prev i {position: relative; left: 50%; top: 26%; transform: translate(-50%, -50%);}
+#pf_E div p.control a.next {right: 0;}
+#pf_E div p.control a.next i {position: relative; right: -50%; top: 26%; transform: translate(-50%, -50%);}
+#pf_E div div ul.indicator {position: absolute; right: 0; bottom: 10px; display: block; width: 73%; height: 30px; text-align: center; line-height: 30px;}
+#pf_E div div ul.indicator > li {display: inline-block; vertical-align: top;}
+#pf_E div div ul.indicator > li + li {margin-left: 8px;}
+#pf_E div div ul.indicator > li > a {display: inline-block; width: 10px; height: 10px; border: 2px solid #000000; border-radius: 40px; text-indent: -9999px; overflow: hidden; background-color: #ffffff;}
+#pf_E div div ul.indicator > li.on > a {width: 40px; border-color: #000000; background-color: #000000;}
+
+
+#about {position: relative; top: 0; width: 100%; height: 130vh;}
+#about h2 {position: relative; display: block; top: 0; text-align: center; font-size: 36px; }
+#about span.side {position: relative; display: inline-block; width: 18%; height: 90%; left: 0; top: 50px; border-right: 2px solid #000000; text-indent: -9999px; animation-name: move08; animation-duration: 3s;}
+#about ul.circle {position: absolute; top: 100px; left: 0; width: 18%; height: 90%;}
+#about ul.circle li {position: relative; width: 10px; height: 10px; border: 2px solid #000000; left: 98.5%; top: 10%; border-radius: 100px; background-color: #ffffff;}
+#about ul.circle li + li {margin-top: 200px;}
+#about ul.circle li.on {position: relative; width: 10px; height: 10px; border: 2px solid #000000; left: 98.5%; top: 10%; border-radius: 100px; background-color: #000000;}
+#about ul.circle li span {position: absolute; text-indent: -99999px;}
+
+@-webkit-keyframes move08 {
+  0%   {height: 0; top: 5%;}
+  100% {height: 90%;}
+}
+
+#about div ul.text {position: absolute; top: 150px; left: 20%; width: 60%; height: 90%;}
+#about div ul.text > li {position: relative; width: 100%; height: 200px; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5); padding-top: 20px;}
+#about div ul.text li + li {margin-top: 10px;}
+#about div ul.text li h4 {padding: 0 0 5px 15px; font-size: 18px;}
+#about div ul.text li dl {padding: 5px 0 5px 25px; font-size: 15px;}
+#about div ul.text li dl dt {font-weight: 600; display: inline-block; width: 100%;}
+#about div ul.text li dl dd {position: relative; width: 90%; top: -22px; left: 60px; display: block; padding-left: 15px;}
+#about div ul.text li:last-child {}
+
+#about div ul.text li div.box {position: relative; width: 1115px; height: 80%; top: 0; left: 0; overflow: hidden;}
+#about div ul.text li div.box div.inner {position: relative; overflow: hidden;;}
+#about div ul.text li div.box ul.slide {position: relative; width: 5000px; overflow: hidden;}
+#about div ul.text li div.box ul.slide li:first-child {top: 0; float: left; width: 150px; height: 160px; margin-left: 20px;}
+
+#about div ul.text li div.box ul.slide li {position: relative; top: -10px; float: left; width: 150px; height: 160px; margin-right: 20px; background-color: yellowgreen;}
+#about div ul.text li div.box ul.slide li img {position: relative; width: 50%; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#about div ul.text li div.box ul.slide li h5 {position: absolute; bottom: 3px; left: 50%; transform: translate(-50%, 0); text-align: center;}
+
+#about div ul.text li p.control {position: absolute; top: 50%; height: 30px; width: 100%; font-size: 25px; line-height: 25px;}
+#about div ul.text li p.control a.prev {left: 0;}
+#about div ul.text li p.control a.next {position: absolute; right: 0;}
+
+#contact {position: relative; top: 0; width: 100%; height: 100vh; padding-top: 200px;}
+#contact h2 {position: relative; display: block; top: 0; text-align: center; font-size: 36px; background-color: yellow;}
+#contact ul {position: absolute; width: 1200px; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 20px; background-color: pink;}
+#contact ul li {float: left; padding: 5px 20px;}
+#contact ul li i {font-size: 20px; display: inline-block; top: 0;}
+#contact ul li p {font-size: 20px; display: inline-block; margin-left: 15px;}
+#contact ul li + li {margin-left: 60px;}
+
+
+#footer {height: 30px; width: 100%; background-color: #333333; color: #ffffff; text-align: center; line-height: 28px;}
+
+
+
+
+
+
+
+
+
+
+/*게시판리스트*/
+#main.board {position: relative; top: 80px; left: 0; width: 100%; height: 1000px;}
+#main h2 {position: relative; top: 0; left: 0; display: block; text-align: center; font-size: 28px; padding-top: 50px;}
+
+#main table.list {position: relative; top: 50px; left: 50%; transform: translate(-50%, 0); width: 60%; height: 60%; border-radius: 10px; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);}
+#main table.list thead tr {position: relative; height: 50px; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+#main table.list thead tr th:nth-child(1) {width: 10px;}
+#main table.list thead tr th:nth-child(2) {width: 150px;}
+#main table.list thead tr th:nth-child(3) {width: 20px;}
+#main table.list thead tr th:nth-child(4) {width: 30px;}
+#main table.list thead tr th:nth-child(5) {width: 10px;}
+
+#main table.list tbody {position: relative; height: 100%; padding: right: 10px;}
+#main table.list tbody tr {height: 30px; }
+#main table.list tbody tr td {border-bottom: 1px solid rgba(0, 0, 0, 0.1); text-align: center; padding-right: 10px; padding-left: 10px;} 
+#main table.list tbody tr td:nth-child(1) {width: 0.5%;}
+#main table.list tbody tr td:nth-child(2) {width: 150px;}
+#main table.list tbody tr td:nth-child(3) {width: 10%;}
+#main table.list tbody tr td:nth-child(4) {width: 15%;}
+#main table.list tbody tr td:nth-child(5) {width: 0.5%;}
+
+#main div.button {position: relative; top: 7%; }
+#main div.button button {position: relative; left: 75%; width: 100px; height: 35px; border: none; font-size: 16px; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);}
+#main div.button button a {position: relative; display: inline-block; height: 100%; width: 100%; line-height: 35px; }
+
+
+
+
+
+
+
+
+
+/*글쓰기*/
+#main.write {position: relative; top: 80px; left: 0; width: 100%; height: 1000px;}

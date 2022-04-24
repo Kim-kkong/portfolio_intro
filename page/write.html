@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Frontend portfolio" />
+    <meta name="apple-mobile-web-app-title" content="" />
+    <title>포트폴리오 | SOOBIN KIM</title>
+    <meta name="description" content="" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../fa/css/all.min.css" />
+    <link href="../fa/css/all.min.css" rel="stylesheet" />
+    <link href="../css/web-font.css" rel="stylesheet" />
+    <link href="../css/style_pc.css" rel="stylesheet" media="screen and (min-width : 1200px)" />
+    <link href="../css/style_m.css" rel="stylesheet" media="screen and (max-width : 1199.9px)" />
+    <script src="https://kit.fontawesome.com/46ab4b8894.js" crossorigin="anonymous"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/dino-common.js"></script>
+  </head>
+  <body class="sub banner-slide step1">
+    <div id="wrapper">
+      <a href="#main" id="skip-nav">본문 바로가기</a>
+      <header id="header">
+        <div class="header-box">
+          <h1>
+            <a href="../index.html">SOOBIN KIM</a>
+          </h1>
+          <nav id="nav">
+            <ul class="gnb">
+              <li>
+                <a href="#">
+                  PORTFOLIO_01
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  PORTFOLIO_02
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  ABOUT
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  CONTACT
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="side">
+            <ul>
+              <li>
+                <a href="#"><i class="fas fa-thin fa-m"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-thin fa-phone"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-solid fa-comments"></i></a>
+              </li>
+            </ul>
+          </div>          
+        </div>
+      </header>
+
+      <main id="main" class="write">
+        <table class="form">
+          <tbody>
+            <tr>
+              <td class="th"><label for="user-id"><em>*</em>아이디/이름</label></td>
+              <td colspan="3">
+                <input type="text" name="user_id" id="user-id" class="text" value="" />
+              </td>
+              <td><label for="email"><em>*</em>E-mail</label></td>
+              <td><input type="text" name="email" id="email" class="text" value="" />
+              </td>
+            </tr>
+            <tr>
+              <td class="th"><label for="user-pw"><em>*</em>비밀번호</label></td>
+              <td><input type="password" name="user_pw" id="user-pw" class="text" value="" /></td>
+              <td class="th"><label for="user-pw-re"><em>*</em>비밀번호(확인)</label></td>
+              <td>
+                <input type="password" name="user_pw_re" id="user-pw-re" class="text" value="" />
+                <span class="desc">※ 필수입력 항목입니다.</span>
+              </td>
+            </tr>
+            
+            <tr>
+              <td class="th"><label for="title">제목</label></td>
+              <td colspan="3"><input type="text" name="title" id="title" class="text full" value="" /></td>
+            </tr>
+            <tr>
+              <td class="th"><label for="editor-content"><em>*</em>상세내용</label></td>
+              <td colspan="3" class="editor">
+                <textarea name="editor_content" id="editor-content" class="editor"></textarea>
+              </td>
+            </tr>
+
+
+
+          </tbody>
+
+
+
+
+
+        </table>
+
+
+
+      </main>
+
+      <footer id="footer">
+        <p class="copyright">Copyright © 2022 KIMSOOBIN</p>
+      </footer>
+    </div> <!-- #wrapper  -->
+
+<script>
+'use strict';
+
+setEditor();
+
+// tinymce editor 적용
+function setEditor() {
+  var rootPath = (document.querySelector('base')) ? document.querySelector('base').getAttribute('href') : '/';
+
+  tinymce.init({
+    selector: 'textarea.editor',
+    plugins: [
+      'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+      'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+      'save table directionality emoticons template paste'
+    ],
+    //content_css: 'css/content.css',
+    content_style: 'p {font-family: "나눔고딕", NanumGothic; margin: 5px; font-size: 13px; line-height: 1.4em;}',
+    toolbar: 'print preview newdocument undo redo | fontselect | fontsizeselect | forecolor backcolor bold italic underline strikethrough | link image media charmap code',
+    font_formats: '나눔고딕=나눔고딕,NanumGothic;Andale Mono=andale mono,times;Arial=arial,helvetica,sans-serif;Arial Black=arial black,avant garde;Book Antiqua=book antiqua,palatino;Comic Sans MS=comic sans ms,sans-serif;Courier New=courier new,courier;Georgia=georgia,palatino;Helvetica=helvetica;Impact=impact,chicago;Symbol=symbol;Tahoma=tahoma,arial,helvetica,sans-serif;Terminal=terminal,monaco;Times New Roman=times new roman,times;Trebuchet MS=trebuchet ms,geneva;Verdana=verdana,geneva;Webdings=webdings;Wingdings=wingdings,zapf dingbats',
+    fontsize_formats: '11px 12px 14px 16px 18px 24px 36px 48px',
+    language: 'ko_KR',
+    // images_upload_url: rootPath + 'editor-image-upload',
+    // images_upload_base_path: rootPath + 'storage/editor',
+    relative_urls : false,
+    images_upload_credentials: true,
+    image_dimensions: false,
+    setup: function (editor) {
+        editor.on('change', function() { editor.save(); });
+    }
+  });
+}
+
+
+</script>
+  </body>
+</html>
+
+
