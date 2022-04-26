@@ -52,7 +52,7 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 
 
 #main {overflow: hidden;}
-#main-section {position: relative; top: 80px; width: 100%; height: 92vh;}
+#main-section {position: relative; top: 80px; width: 100%; height: 100vh;}
 #main-section div.typing-txt {display: none;}
 #main-section div.typing-txt ul li {font-size: 26px; font-weight: 600;}
 #main-section div.typing-txt ul{list-style:none;}
@@ -66,10 +66,10 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 
 
 #main-section ul li span {position: absolute; text-indent: -9999px;}
-#main-section ul li span.right01.move01 {top: 0; left: 415px; width: 1px; height: 860px; border-right: 2px solid #000000; animation-name: move01; animation-duration: 4s;}
+#main-section ul li span.right01.move01 {top: 0; left: 415px; width: 1px; height: 850px; border-right: 2px solid #000000; animation-name: move01; animation-duration: 4s;}
 #main-section ul li span.right02.move02 {top: 0; left: 471px; width: 1px; height: 434px; border-right: 2px solid #000000; animation-name: move02; animation-duration: 5s;}
-#main-section ul li span.left01.move03 {bottom: 0; left: 1446px; width: 1px; height: 700px; border-left: 2px solid #000000; animation-name: move03; animation-duration: 6s;}
-#main-section ul li span.left02.move04 {bottom: 0; left: 1505px; width: 1px; height: 700px; border-left: 2px solid #000000; animation-name: move04; animation-duration: 4s;}
+#main-section ul li span.left01.move03 {bottom: 0px; left: 1446px; width: 1px; height: 750px; border-left: 2px solid #000000; animation-name: move03; animation-duration: 6s;}
+#main-section ul li span.left02.move04 {bottom: 0; left: 1505px; width: 1px; height: 750px; border-left: 2px solid #000000; animation-name: move04; animation-duration: 4s;}
 #main-section ul li span.top01.move05 {top: 220px; left: 0; width: 1560px; height: 1px; border-bottom: 2px solid #000000; animation-name: move05; animation-duration: 5s;}
 #main-section ul li span.top02.move06 {top: 270px; right: 0; width: 1560px; height: 1px; border-bottom: 2px solid #000000; animation-name: move06; animation-duration: 7s;}
 #main-section ul li span.bottom01.move07 {top: 650px; right: 0; width: 1560px; height: 1px; border-bottom: 2px solid #000000; animation-name: move07; animation-duration: 4s;}
@@ -77,7 +77,7 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 
 @-webkit-keyframes move01 {
   0%   {height: 0;}
-  100% {height: 860px;}
+  100% {height: 830px;}
 }
 
 @-webkit-keyframes move02 {
@@ -87,12 +87,12 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 
 @-webkit-keyframes move03 {
   0%   {height: 0;}
-  100% {height: 700px;}
+  100% {height: 750px;}
 }
 
 @-webkit-keyframes move04 {
   0%   {height: 0;}
-  100% {height: 700px;}
+  100% {height: 750px;}
 }
 
 @-webkit-keyframes move05 {
@@ -118,7 +118,7 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 #main-section ul.gnb li + li {margin-left: 40px;}
 
 
-#pf_F {position: relative; top: 0; width: 100%; height: 100vh; padding-top: 150px;}
+#pf_F {position: relative; top: 0; width: 100%; height: 100vh; padding-top: 150px; background-color: #ffffff;}
 #pf_F h2 {position: relative; display: block; top: 0; text-align: center; font-size: 36px;}
 #pf_F h3 {position: relative; display: block; top: 0; text-align: center; font-size: 18px; margin-bottom: 60px;}
 
@@ -233,6 +233,7 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 #about div ul.text li dl {padding: 5px 0 5px 25px; font-size: 15px;}
 #about div ul.text li dl dt {font-weight: 600; display: inline-block; width: 100%;}
 #about div ul.text li dl dd {position: relative; width: 90%; top: -22px; left: 60px; display: block; padding-left: 15px;}
+#about div ul.text li:nth-child(2) dl dd {position: relative; width: 90%; top: -22px; left: 140px; display: block; padding-left: 15px;}
 #about div ul.text li:last-child {}
 #about div ul.text li div.box {position: relative; width: 1115px; height: 80%; top: 0; left: 0; overflow: hidden;}
 #about div ul.text li div.box div.inner {position: relative; overflow: hidden;}
