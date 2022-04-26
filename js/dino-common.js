@@ -16,7 +16,11 @@ $(document).ready(function() {
     }
   }
 
-
+  //gnb
+  $('#nav ul.gnb li a').on('click focus', function() {
+    $('#nav ul.gnb li').removeClass('on');
+    $(this).parent().addClass('on');
+  });
 
 
 
@@ -92,7 +96,7 @@ $(document).ready(function() {
       
         $selector.find('.indicator li a').on('click', function() {
           var index = $selector.find('.indicator li').index($(this).parent());
-          var index02 = $selector.find('.box-text > li').index($(this).parent());
+          var index02 = $selector.find('.box-text li').index($(this).parent());
           showSlide(index + 1);
           showUp(index02 + 1);
         });
@@ -106,7 +110,6 @@ $(document).ready(function() {
           showSlide(slideNext);
           showUp(showNext);
         });
-      
       
         function showSlide(l) {
           $selector.find('.box-img').css({'transition': 'left 1s', 'left': (-(l - 1) * 100) + '%'});
@@ -193,10 +196,9 @@ $(document).ready(function() {
     });
     
     if (numBanner < bannerNow) bannerNow = numBanner;
-    console.log(widthBox + ' / ' + widthBar + ' / ' + offsetLeftMin + ' :::' + numBanner);
+    //console.log(widthBox + ' / ' + widthBar + ' / ' + offsetLeftMin + ' :::' + numBanner);
     showBanner(bannerNow);
   }
-
 
 });
 

@@ -39,7 +39,6 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 15px; color: #333333; ba
 #nav ul.gnb li:hover {float: left; font-size: 18px; bottom: 0; font-weight: 600; }
 #nav ul.gnb li:hover::before {position: absolute; top: 0; content: ''; width: 5px; height: 5px; border: 1px solid #000000; background-color: #000000; border-radius: 100px;}
 #nav ul.gnb li + li {margin-left: 40px;}
-
 #nav ul.gnb li:nth-child(1):hover::before {left: 12%;}
 #nav ul.gnb li:nth-child(2):hover::before {left: 43%;}
 #nav ul.gnb li:nth-child(3):hover::before {left: 68.5%;}
