@@ -42,13 +42,11 @@ $(document).ready(function() {
         $(".typing").append(typingTxt[typingIdx]); 
         typingIdx++; 
       } else {
-
         if(liIndex >= liLength-1){
           liIndex = 0;
         }else{
           liIndex++; 
         }
-        
             typingIdx=0;
             typingBool = false; 
             typingTxt = $(".typing-txt>ul>li").eq(liIndex).text(); 

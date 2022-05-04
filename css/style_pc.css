@@ -211,40 +211,453 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 #pf_E div div ul.indicator > li > a {display: inline-block; width: 10px; height: 10px; border: 2px solid #000000; border-radius: 40px; text-indent: -9999px; overflow: hidden; background-color: #ffffff;}
 #pf_E div div ul.indicator > li.on > a {width: 40px; border-color: #000000; background-color: #000000;}
 
-
-#about {position: relative; top: 0; width: 100%; height: 130vh;}
-#about h2 {position: relative; display: block; top: 0; text-align: center; font-size: 36px; }
-#about span.side {display: none; position: relative; width: 17%; height: 90%; left: 0; top: 50px; border-right: 2px solid #000000; text-indent: -9999px;  animation-duration: 3s; }
-#about ul.circle {display: none; position: absolute; top: 100px; left: 0; width: 17%; height: 90%; }
-#about ul.circle li {position: relative; width: 10px; height: 10px; border: 2px solid #000000; left: 98.5%; top: 10%; border-radius: 100px; background-color: #ffffff;}
-#about ul.circle li + li {margin-top: 75%;}
-#about ul.circle li.on {position: relative; width: 10px; height: 10px; border: 2px solid #000000; left: 98.5%; top: 10%; border-radius: 100px; background-color: #000000;}
-#about ul.circle li span {position: absolute; text-indent: -99999px;}
-
-@-webkit-keyframes move08 {
-  0%   {height: 0; top: 5%;}
-  100% {height: 90%;}
+*:not(head),
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
-#about div ul.text {position: absolute; top: 150px; left: 20%; height: 90%;}
-#about div ul.text > li {position: relative; width: 100%; height: 200px; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); padding-top: 20px;}
-#about div ul.text > li + li {margin-top: 30px;}
-#about div ul.text li h4 {padding: 0 0 5px 15px; font-size: 18px;}
-#about div ul.text li dl {padding: 5px 0 5px 25px; font-size: 15px;}
-#about div ul.text li dl dt {font-weight: 600; display: inline-block; width: 100%;}
-#about div ul.text li dl dd {position: relative; width: 90%; top: -22px; left: 60px; display: block; padding-left: 15px;}
-#about div ul.text li:nth-child(2) dl dd {position: relative; width: 90%; top: -22px; left: 140px; display: block; padding-left: 15px;}
-#about div ul.text li:last-child {}
-#about div ul.text li div.box {position: relative; width: 1115px; height: 80%; top: 0; left: 0; overflow: hidden;}
-#about div ul.text li div.box div.inner {position: relative; overflow: hidden;}
-#about div ul.text li div.box ul.slide {position: relative; width: 5000px; overflow: hidden;}
-#about div ul.text li div.box ul.slide li:first-child {top: 0; float: left; width: 150px; height: 160px; margin-left: 20px;}
-#about div ul.text li div.box ul.slide li {position: relative; float: left; width: 150px; height: 160px; margin-right: 20px;}
-#about div ul.text li div.box ul.slide li img {position: relative; width: 50%; left: 50%; top: 50%; transform: translate(-50%, -50%);}
-#about div ul.text li div.box ul.slide li h5 {position: absolute; bottom: 3px; left: 50%; transform: translate(-50%, 0); text-align: center;}
-#about div ul.text li p.control {position: absolute; top: 50%; height: 30px; width: 100%; font-size: 25px; line-height: 25px;}
-#about div ul.text li p.control a.prev {left: 0;}
-#about div ul.text li p.control a.next {position: absolute; right: 0;}
+#about {position: relative; top: 0; width: 100%; height: 130vh; 	min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin: 40px 0px; height: auto; max-width: 1300px; padding: 40px;  background: var(--theme); border-radius: 20px;}
+#about h2 {position: relative; display: block; top: 0; text-align: center; font-size: 36px; margin-bottom: 50px; }
+
+#about ul.accordian li dl {padding: 5px 0 5px 10px; font-size: 15px;	font-size: 12pt; line-height: 20pt; margin: 15px 0px;}
+#about ul.accordian li dl dt {font-weight: 600; display: inline-block; width: 100%;}
+#about ul.accordian li dl dd {position: relative; width: 100%; top: -28px; left: 60px; display: block; padding-left: 15px;}
+#about ul.accordian li:nth-child(2) dl dd {position: relative; width: 100%; top: -28px; left: 60px; display: block; padding-left: 105px;}
+
+
+#about ul.accordian li.software {background: pink; display: inline-block;}
+#about ul.accordian li.software div.accordian {}
+#about ul.accordian li.software div.accordian div.inner {}
+#about ul.accordian li.software div.accordian div.inner ul.slide {}
+#about ul.accordian li.software div.accordian div.inner ul.slide li {display: inline-block; }
+
+#about a,
+#about a::before,
+#about a::after,
+#about a:hover::before,
+#about a:hover::after,
+#about a:hover {text-decoration: none; transition: all 0.3s ease-in-out;
+}
+
+#about a:hover {cursor: pointer;}
+#about a:active {transform: translateY(3px) scale(0.95); color: inherit; transition: unset !important;}
+
+#about input {display: none;}
+
+#about ul.accordian {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	padding: unset;
+}
+
+#about ul.accordian li {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	margin-bottom: 0px;
+	border-bottom: 2px solid white;
+	background-size: cover !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	padding: 20px;
+	z-index: 1;
+	transition: all 0.7s ease-in-out;
+}
+
+#about ul.accordian li:nth-child(1) {
+	background: #ffffff;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 20px 20px 0 0;
+}
+
+#about ul.accordian li:nth-child(2) {
+	background: #ffffff;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#about ul.accordian li:nth-child(3) {
+	background: #ffffff;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#about ul.accordian li:nth-child(4) {
+	background: #ffffff;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#about ul.accordian li:nth-child(5) {
+	background: #ffffff;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#about ul.accordian li:nth-child(6) {
+	background: #ffffff;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 0 0 20px 20px;
+}
+
+#about ul.accordian li:last-of-type {
+	margin-bottom: 0px;
+}
+
+#about ul.accordian li::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	content: "";
+	backdrop-filter: grayscale(80%);
+	transition: all 0.3s ease-in-out;
+}
+
+#about ul.accordian li label {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+#about ul.accordian li label:hover {
+	cursor: pointer;
+}
+
+#about ul.accordian li svg {
+	position: absolute;
+	fill: black;
+	width: 40px;
+	height: auto;
+	top: 45px;
+	right: 40px;
+	z-index: 9;
+	transition: all 0.5s ease-in-out;
+}
+
+#about ul.accordian li div {
+	position: relative;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 20px;
+	border-radius: 20px;
+	background: var(--theme);
+	backdrop-filter: blur(4px);
+	overflow: hidden;
+}
+
+#about ul.accordian li div h4 {
+	position: relative;
+	font-size: 22px;
+	line-height: 30px;
+	color: #000000;
+	margin: 0;
+	font-weight: 500;
+	white-space: nowrap;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	transition: all 0.3s ease-in-out;
+}
+
+#about ul.accordian li label:hover ~ div h4 {
+	padding-left: 30px;
+	transition: all 0.2s ease-in-out;
+}
+
+#about ul.accordian li {
+	--accent: rgba(0, 0, 0, 0.3);
+}
+
+#about ul.accordian li div h4::before {
+	position: absolute;
+	width: 100%;
+	height: 8px;
+	background: var(--accent);
+	margin-right: 800px;
+	bottom: 0;
+	border-radius: 100%;
+	content: "";
+	z-index: -1;
+	transition: all 0.3s ease-in-out;
+}
+
+#about ul.accordian li label:hover ~ div h4::before {
+	margin-right: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+#about ul.accordian li div h4::after {
+	position: absolute;
+	width: 130%;
+	height: 100%;
+	content: "";
+	background: var(--accent);
+	margin-right: 1000px;
+	z-index: -2;
+	transition: all 0.5s ease-in-out;
+}
+
+#about ul.accordian li p {
+
+}
+
+#about ul.accordian li a {
+	position: relative;
+	background: #ffffff;
+	padding: 5px 10px;
+	font-size: 12pt;
+	margin-bottom: 10px;
+	color: black;
+	overflow: hidden;
+	border-radius: 5px;
+	z-index: 1;
+}
+
+#about ul.accordian li a::after {
+	position: absolute;
+	top: 80%;
+	right: 110%;
+	background: var(--accent);
+	width: 100%;
+	height: 100%;
+	border-radius: 0 5px 0 0;
+	z-index: -1;
+	content: "";
+}
+
+#about ul.accordian li a:hover::after {
+	top: 0;
+	right: 0;
+}
+
+#about ul.accordian li a:hover {
+	color: #ffffff;
+}
+
+#about ul.accordian > li > div *:not(h4) {
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+#about ul.accordian > li > div {
+	max-height: 90px;
+	transition: all 0.5s ease-in-out;
+}
+
+#about #mzb-1:checked ~ ul > li:nth-child(1) {
+	margin-bottom: 60px;
+
+	border-bottom: 10px solid var(--accent);
+	border-radius: 20px;
+	transition: all 0.4s ease-in-out;
+}
+
+#about #mzb-2:checked ~ ul > li:nth-child(2),
+#about #mzb-3:checked ~ ul > li:nth-child(3),
+#about #mzb-4:checked ~ ul > li:nth-child(4),
+#about #mzb-5:checked ~ ul > li:nth-child(5) {
+	margin-top: 60px;
+	margin-bottom: 60px;
+
+	border-radius: 20px;
+	border-bottom: 10px solid var(--accent);
+	transition: all 0.4s ease-in-out;
+}
+
+#about #mzb-6:checked ~ ul > li:nth-child(6) {
+	margin-top: 60px;
+
+	border-bottom: 10px solid var(--accent);
+	border-radius: 20px;
+	transition: all 0.4s ease-in-out;
+}
+
+#about #mzb-1:checked ~ ul > li:nth-child(1) > div *:not(h4),
+#about #mzb-2:checked ~ ul > li:nth-child(2) > div *:not(h4),
+#about #mzb-3:checked ~ ul > li:nth-child(3) > div *:not(h4),
+#about #mzb-4:checked ~ ul > li:nth-child(4) > div *:not(h4),
+#about #mzb-5:checked ~ ul > li:nth-child(5) > div *:not(h4),
+#about #mzb-6:checked ~ ul > li:nth-child(6) > div *:not(h4) {
+	transition: all 0.3s ease-in-out;
+	opacity: 1;
+}
+
+#about #mzb-1:checked ~ ul > li:nth-child(1)::after,
+#about #mzb-2:checked ~ ul > li:nth-child(2)::after,
+#about #mzb-3:checked ~ ul > li:nth-child(3)::after,
+#about #mzb-4:checked ~ ul > li:nth-child(4)::after,
+#about #mzb-5:checked ~ ul > li:nth-child(5)::after,
+#about #mzb-6:checked ~ ul > li:nth-child(6)::after {
+	backdrop-filter: grayscale(0%);
+	transition: all 0.3s ease-in-out;
+}
+
+#about #mzb-1:checked ~ ul > li:nth-child(1) > div,
+#about #mzb-2:checked ~ ul > li:nth-child(2) > div,
+#about #mzb-3:checked ~ ul > li:nth-child(3) > div,
+#about #mzb-4:checked ~ ul > li:nth-child(4) > div,
+#about #mzb-5:checked ~ ul > li:nth-child(5) > div,
+#about #mzb-6:checked ~ ul > li:nth-child(6) > div {
+	background: #ffffff;
+	max-height: 800px;
+	/* If adding content text longer than the third item in demo, increase the max-height value so it fits properly on mobile devices. */
+	transition: all 0.5s ease-in-out;
+	transition-delay: 0.1s;
+}
+
+#about #mzb-1:checked ~ ul > li:nth-child(1) > label,
+#about #mzb-2:checked ~ ul > li:nth-child(2) > label,
+#about #mzb-3:checked ~ ul > li:nth-child(3) > label,
+#about #mzb-4:checked ~ ul > li:nth-child(4) > label,
+#about #mzb-5:checked ~ ul > li:nth-child(5) > label,
+#about #mzb-6:checked ~ ul > li:nth-child(6) > label {
+	display: none;
+}
+
+#about #mzb-1:checked ~ ul > li:nth-child(1) > svg,
+#about #mzb-2:checked ~ ul > li:nth-child(2) > svg,
+#about #mzb-3:checked ~ ul > li:nth-child(3) > svg,
+#about #mzb-4:checked ~ ul > li:nth-child(4) > svg,
+#about #mzb-5:checked ~ ul > li:nth-child(5) > svg,
+#about #mzb-6:checked ~ ul > li:nth-child(6) > svg {
+	transform: rotateZ(180deg) translateY(3px);
+	fill: #ffffff;
+	transition: all 0.5s ease-in-out;
+}
+
+#about #mzb-1:checked ~ ul > li:nth-child(1) > div > h4,
+#about #mzb-2:checked ~ ul > li:nth-child(2) > div > h4,
+#about #mzb-3:checked ~ ul > li:nth-child(3) > div > h4,
+#about #mzb-4:checked ~ ul > li:nth-child(4) > div > h4,
+#about #mzb-5:checked ~ ul > li:nth-child(5) > div > h4,
+#about #mzb-6:checked ~ ul > li:nth-child(6) > div > h4 {
+	margin-right: 0px;
+	transition: all 0.5s ease-in-out;
+}
+
+#about #mzb-3:checked ~ ul > li:nth-child(3) > div > h4,
+#about #mzb-5:checked ~ ul > li:nth-child(5) > div > h4 {
+	color: black;
+	transition: all 0.5s ease-in-out;
+}
+
+#about #mzb-3:checked ~ ul > li:nth-child(3) > div > a:hover,
+#about #mzb-5:checked ~ ul > li:nth-child(5) > div > a:hover {
+	color: black;
+}
+
+#about #mzb-1:checked ~ ul > li:nth-child(1) > div > h4::after,
+#about #mzb-2:checked ~ ul > li:nth-child(2) > div > h4::after,
+#about #mzb-3:checked ~ ul > li:nth-child(3) > div > h4::after,
+#about #mzb-4:checked ~ ul > li:nth-child(4) > div > h4::after,
+#about #mzb-5:checked ~ ul > li:nth-child(5) > div > h4::after,
+#about #mzb-6:checked ~ ul > li:nth-child(6) > div > h4::after {
+	margin-right: 0;
+	border-radius: 0 10px 10px 0;
+	transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 1340px) {
+	#about {
+		margin: 0px;
+	}
+}
+
+@media (max-width: 660px) {
+	#about {
+		padding: 25px;
+	}
+	#about ul li div h4 {
+		font-size: 20pt;
+		line-height: 30pt;
+		color: #ffffff;
+	}
+	#about ul > li > div {
+		max-height: 80px;
+	}
+	#about ul li svg {
+		width: 30px;
+		top: 45px;
+	}
+}
+
+@media (max-width: 450px) {
+	#about ul li label:hover ~ div h4 {
+		padding-left: 0px;
+		transition: all 0.2s ease-in-out;
+	}
+	#about ul li label:hover ~ div h4::before {
+		margin-right: 1000px;
+	}
+	#about ul li div h4 {
+		font-size: 16pt;
+		line-height: 26pt;
+		color: white;
+	}
+	#about ul > li > div {
+		max-height: 75px;
+	}
+}
+
+@media (max-width: 400px) {
+	#about ul li svg {
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #contact {position: relative; top: 0; width: 100%; height: 100vh; padding-top: 200px;}
 #contact h2 {position: relative; display: block; top: 0; text-align: center; font-size: 36px;}
